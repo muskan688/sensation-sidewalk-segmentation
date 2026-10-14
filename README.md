@@ -16,6 +16,18 @@ Technical milestones that are completed in this project include:
 
 ------------------------------------------------------------------------------------------
 
+# My Contribution
+
+This was a university team project at FAU Erlangen-Nürnberg. I was the main contributor to this repository and wrote most of its code, which covers:
+
+- **Segmentation model:** DeepLabV3+ with a ResNet34 encoder (`segmentation_models_pytorch`), trained on Cityscapes and fine-tuned on a 1000-image Mapillary Vistas sidewalk subset (Dice loss, Adam, 256x512 input), in `model_training/`.
+- **Evaluation:** per-image binary IoU, precision and F1 (`eval/`).
+- **Deployment and demo:** ONNX export for the Jetson Nano (`sensation/helper/onnx_export.py`) and the video, camera and image pipeline with GPS-based route instructions (`rsu_vi.py`, `sensation/`).
+
+Quantitative results (IoU of the base vs. the fine-tuned model on a common test set) are not yet included here; the evaluation is being re-run so that both models are scored on the same data.
+
+------------------------------------------------------------------------------------------
+
 # Project Structure
 ```
 ├── README.md
